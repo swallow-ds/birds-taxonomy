@@ -7,7 +7,6 @@
 114329 "taxon name":"Neopelma chrysocephalum" name:キボウシマイコドリ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/HeteropelmaIgnicepsSmit.jpg
 118200 "taxon name":"Dryobates pubescens" name:セジロコゲラ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Downy%20Woodpecker01.jpg
 1196302 "taxon name":"Corvus moneduloides" name:カレドニアガラス rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/CorvusMoneduloidesKeulemans.jpg
-120794 "taxon name":"Falco rusticolus" name:シロハヤブサ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Falco%20rusticolus%20white%20cropped.jpg
 121530 "taxon name":"Tauraco erythrolophus" name:アカガシラエボシドリ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Red-crested%20Turaco%20RWD.jpg
 126785 "taxon name":Athene name:Athene
 127873 "taxon name":Cinclidae name:カワガラス科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Cinclus%20mexicanus%20FWS.jpg
@@ -19,7 +18,6 @@
 13146 "taxon name":"Melopsittacus undulatus" name:セキセイインコ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Budgerigar-male-strzelecki-qld.jpg
 134902 "taxon name":"Corvus hawaiiensis" name:ハワイガラス rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Corvus%20hawaiiensis%20FWS.jpg
 142475 "taxon name":Poecile name:コガラ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Mountain%20Chickadee%2C%20Santa%20Fe%20Ski%20Area.jpg
-148594 "taxon name":"Falco naumanni" name:ヒメチョウゲンボウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/A%20Lesser%20Kestrel%20on%20a%20Weak%20Perch%20%2849591372658%29.jpg
 1517830 "taxon name":Dryobates name:Dryobates
 1523891 "taxon name":Haemorhous name:Haemorhous
 1545690 "taxon name":Psittaculidae name:Psittaculidae
@@ -122,8 +120,6 @@
 33615 "taxon name":Gymnogyps name:Gymnogyps
 33616 "taxon name":"Gymnogyps californianus" name:カリフォルニアコンドル rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/California-Condor3-Szmurlo%20edit.jpg
 33617 "taxon name":Pelecanus name:ペリカン属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Pelecanus%20conspicillatus%20-Brisbane%20Water%2C%20Broken%20Bay%2C%20New%20South%20Wales%2C%20Australia%20-colony-8.jpg
-345155 "taxon name":"Falco biarmicus" name:ラナーハヤブサ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Lanner%20falcon%2C%20Falco%20biarmicus%2C%20at%20Kgalagadi%20Transfrontier%20Park%2C%20Northern%20Cape%2C%20South%20Africa%20%2834447024871%29.jpg
-345164 "taxon name":"Falco cherrug" name:セーカーハヤブサ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Falco%20cherrug%201%20%28Bohu%C5%A1%20%C4%8C%C3%AD%C4%8Del%29.jpg
 35539 "taxon name":Pezoporus name:キジインコ rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Westerngroundparrotsing.jpg
 35540 "taxon name":"Pezoporus wallicus" name:キジインコ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Eastern%20Ground%20Parrot%20at%20Barren%20Grounds%20Nature%20Reserve%20NSW%20Australia.jpg
 35547 "taxon name":Strigops name:Strigops
@@ -415,7 +411,6 @@
 30420 -> 85066 :"child taxon"
 87174 -> 87175 :"child taxon"
 114313 -> 88178 :"child taxon"
-8952 -> 148594 :"child taxon"
 55806 -> 175006 :"child taxon"
 57380 -> 175829 :"child taxon"
 175829 -> 175835 :"child taxon"
@@ -430,15 +425,12 @@
 114313 -> 196036 :"child taxon"
 8918 -> 198806 :"child taxon"
 196036 -> 328815 :"child taxon"
-8952 -> 345155 :"child taxon"
-8952 -> 345164 :"child taxon"
 40155 -> 59728 :"child taxon"
 59728 -> 59729 :"child taxon"
 36292 -> 59894 :"child taxon"
 30409 -> 64668 :"child taxon"
 70930 -> 75485 :"child taxon"
 1517830 -> 118200 :"child taxon"
-8952 -> 120794 :"child taxon"
 56303 -> 121530 :"child taxon"
 9220 -> 1517830 :"child taxon"
 30420 -> 134902 :"child taxon"
