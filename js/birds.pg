@@ -257,7 +257,6 @@
 8894 "taxon name":Apus name:Apus
 8895 "taxon name":"Apus apus" name:ヨーロッパアマツバメ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Apus%20apus%20-Barcelona%2C%20Spain-8%20%281%29.jpg
 8896 "taxon name":Chaetura name:Chaetura
-8897 "taxon name":"Chaetura pelagica" name:エントツアマツバメ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Chaetura%20pelagica%2C%20by%20Lake%20Erie%2C%20Cleveland%2C%20Ohio%2C%20USA%20339593191.jpg
 889875 "taxon name":"Pezoporus flaviventris" name:ニシキジインコ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Westerngroundparrot.jpg
 8899 "taxon name":Ardeidae name:サギ科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/2015-10-19%20Botaurus%20stellaris%2C%20Gosforth%20Park%205.jpg
 8902 "taxon name":Caprimulgiformes name:ヨタカ目 rank_ja:目 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus%20macrurus.jpg
@@ -513,7 +512,6 @@
 2607033 -> 8894 :"child taxon"
 8894 -> 8895 :"child taxon"
 2607033 -> 8896 :"child taxon"
-8896 -> 8897 :"child taxon"
 9205 -> 8899 :"child taxon"
 2607030 -> 8902 :"child taxon"
 8825 -> 8906 :"child taxon"
