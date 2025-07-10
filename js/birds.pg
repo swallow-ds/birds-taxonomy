@@ -248,7 +248,6 @@
 8842 "taxon name":Anser name:マガン属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Anser%20anser%202%20%28Piotr%20Kuczynski%29.jpg
 8845 "taxon name":"Anser cygnoides" name:サカツラガン rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Anser%20cygnoides%20Qiqihar%202.jpg
 8867 "taxon name":Cygnus name:ハクチョウ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Cygnus%20olor%202%20%28Marek%20Szczepanek%29.jpg
-8868 "taxon name":"Cygnus atratus" name:コクチョウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/00%202102%20Trauerschw%C3%A4ne%20%28Breisach%20am%20Rhein%29.jpg
 8869 "taxon name":"Cygnus olor" name:コブハクチョウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Mute%20Swan%20Emsworth2.JPG
 8883 "taxon name":Oxyura name:オタテガモ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Male%20Ruddy%20Duck%20%28oxyura%20jamaicensis%29%20at%20Texas%20Coast.jpg
 8884 "taxon name":"Oxyura jamaicensis" name:アカオタテガモ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/065%20-%20RUDDY%20DUCK%20%2811-27-07%29%20fem%2C%20oso%20flaco%2C%20sloco%2C%20ca%20oso%20%281%29%20%288718083235%29.jpg
@@ -503,7 +502,6 @@
 2068722 -> 8842 :"child taxon"
 8842 -> 8845 :"child taxon"
 2068722 -> 8867 :"child taxon"
-8867 -> 8868 :"child taxon"
 8867 -> 8869 :"child taxon"
 2068716 -> 8883 :"child taxon"
 8883 -> 8884 :"child taxon"
