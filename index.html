@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <title>Birds Taxonomy</title>
-        <script src='https://cdn.jsdelivr.net/gh/blitzboard/blitzboard@v1.2.0/dist/blitzboard.bundle.min.js'></script>
-        <script src='https://unpkg.com/vis-network@9.0.4/standalone/umd/vis-network.min.js'></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-        <link rel="stylesheet" href="js/style.css">
-        <script src="js/path.js"></script>
-    </head>
-    <body onload=init()>
-        <div class="container" style="width: 92%">
-            <div class="select-container">
-                <label id="input_label" for="tags">Search: </label><input id="tags" size="40" class="rounded">
-            </div>
-            <div class="button-container">
-                <button id="button-clear" class="text-muted rounded-button">Clear graph</button>
-            </div>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaXr: Taxonomy Explorer</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Taxr" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src='https://cdn.jsdelivr.net/gh/blitzboard/blitzboard@v1.2.0/dist/blitzboard.bundle.min.js'></script>
+    <script src='https://unpkg.com/vis-network@9.0.4/standalone/umd/vis-network.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="js/style.css">
+    <script src="js/path.js"></script>
+</head>
+
+<body onload=init()>
+    <div class="container">
+        <div class="logo-container">
+            <img src="assets/logo-taxr.svg" alt="TaXr Logo" class="logo">
         </div>
-        <br>
-        <div id='graph-area' style="width: 90%; height: 600px; border: solid 1px silver; background: radial-gradient(white, silver);">
-            <div id='child-area' style='width: 90%; height: 600px;'></div>
+        <div class="select-container">
+            <span class="material-icons search-icon">search</span>
+            <label id="input_label" for="tags" class="visually-hidden"></label>
+            <input id="tags" size="40" class="rounded" placeholder="Search...">
+            <span class="material-icons clear-search-icon" id="clear-search">close</span>
         </div>
-        <table border="1" id="resultsTable">
-        </table>
-        <script>
-         let blitzboard = new Blitzboard(document.getElementById('child-area'));
-         let graph, config;
-         let graphPromise = fetch('js/birds.pg').then(res => {
-             return res.text();
-         }).then(text => {
-             graph = text;
-         });
-         let configPromise = fetch('js/config-tooltip.js').then(res => {
-             return res.text();
-         }).then(text => {
-             config = text;
-         });
-         Promise.all([graphPromise, configPromise]).then(() => {
-             blitzboard.setGraph(graph, false);
-             blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
-             blitzboard.network.stabilize();
-         });
-        </script>
-    </body>
+        <div class="button-container">
+            <button id="button-clear" class="text-muted rounded-button"><span
+                    class="material-icons">delete_sweep</span>Clear</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <div id='graph-area'>
+            <div id='child-area'></div>
+            <div class="loader"></div>
+        </div>
+        <div class="table-container">
+            <table id="resultsTable">
+            </table>
+        </div>
+    </div>
+    <script>
+        // 検索ボックスのクリア機能
+        const searchInput = document.getElementById('tags');
+        const clearSearchButton = document.getElementById('clear-search');
+
+        function toggleClearButton() {
+            clearSearchButton.classList.toggle('visible', searchInput.value.length > 0);
+        }
+
+        searchInput.addEventListener('input', toggleClearButton);
+
+        clearSearchButton.addEventListener('click', () => {
+            searchInput.value = '';
+            toggleClearButton();
+            // 既存の検索関連の処理をトリガー
+            if (typeof clearResults === 'function') {
+                clearResults();
+            }
+        });
+
+        let blitzboard = new Blitzboard(document.getElementById('child-area'));
+        let graph, config;
+        let graphPromise = fetch('js/birds.pg').then(res => {
+            return res.text();
+        }).then(text => {
+            graph = text;
+        });
+        let configPromise = fetch('js/config-tooltip.js').then(res => {
+            return res.text();
+        }).then(text => {
+            config = text;
+        });
+        Promise.all([graphPromise, configPromise]).then(() => {
+            blitzboard.setGraph(graph, false);
+            blitzboard.setConfig(Function('blitzboard', `"use strict";return (${config})`)(blitzboard), true);
+            blitzboard.network.stabilize();
+        });
+    </script>
+</body>
+
 </html>

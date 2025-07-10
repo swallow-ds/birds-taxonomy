@@ -1,69 +1,661 @@
+/* Google Fontsのインポート */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 /* 全体的なスタイル設定 */
+:root {
+    --primary-color: #0e2622;
+    --secondary-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --border-color: #e1e8ed;
+    --hover-color: #1a3d37;
+    --container-padding: 8px 16px;
+    --header-height: 48px;
+}
+
 body {
-    font-family: Arial, sans-serif; /* サンセリフフォント */
-    font-size: 12px; /* 小さい文字サイズ */
-    color: #333;    /* 暗めの文字色 */
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #191970; /* ミッドナイトブルー */
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* コンテナスタイル */
+.container {
+    width: 100%;
+    height: var(--header-height);
+    padding: var(--container-padding);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ロゴスタイル */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* 検索コンテナスタイル */
+.select-container {
+    flex: 1;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5f6368;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.clear-search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5f6368;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    display: none;
+}
+
+.clear-search-icon:hover {
+    opacity: 1;
+}
+
+.clear-search-icon.visible {
+    display: block;
+}
+
+.rounded {
+    width: 100%;
+    height: 36px;
+    padding: 0 16px 0 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.rounded:focus {
+    outline: none;
+    background-color: #e8eaed;
+}
+
+/* ボタンコンテナスタイル */
+.button-container {
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+    justify-content: flex-end;
+}
+
+.rounded-button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+}
+
+.rounded-button .material-icons {
+    font-size: 16px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.rounded-button:hover .material-icons {
+    opacity: 1;
+}
+
+.rounded-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-1px);
+}
+
+.clear-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0e2622;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.clear-button:hover {
+    background-color: #173d35;
+}
+
+/* ナビゲーションコントロール */
+.vis-navigation {
+    position: absolute;
+    right: 130px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    gap: 8px;
+    z-index: 10;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* ズームボタンのコンテナ */
+.vis-navigation > div:last-child {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.vis-button {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    position: relative;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.vis-button:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+/* 矢印ボタンのスタイル */
+.vis-up::before,
+.vis-down::before,
+.vis-left::before,
+.vis-right::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #5f6368;
+    border-right: 2px solid #5f6368;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.vis-up::before {
+    transform: translate(-50%, -25%) rotate(-45deg);
+}
+
+.vis-down::before {
+    transform: translate(-50%, -75%) rotate(135deg);
+}
+
+.vis-left::before {
+    transform: translate(-25%, -50%) rotate(-135deg);
+}
+
+.vis-right::before {
+    transform: translate(-75%, -50%) rotate(45deg);
+}
+
+.vis-up,
+.vis-down,
+.vis-left,
+.vis-right,
+.vis-zoomExtends,
+.vis-zoomIn,
+.vis-zoomOut {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ズームボタンのスタイル */
+.vis-zoomIn::before,
+.vis-zoomOut::before,
+.vis-zoomExtends::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5f6368;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.vis-zoomIn::before {
+    content: '+';
+}
+
+.vis-zoomOut::before {
+    content: '−';
+}
+
+.vis-zoomExtends::before {
+    content: '⛶';
+    font-size: 18px;
+}
+
+/* ボタン間の区切り線 */
+.vis-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #e1e8ed;
+    margin: 4px 0;
+}
+
+/* メインコンテンツのスタイル調整 */
+.main-content {
+    margin-top: var(--header-height);
+    padding: 16px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#graph-area {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+#child-area {
+    width: 100%;
+    height: 100%;
+}
+
+.table-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    margin-bottom: 24px;
+}
+
+/* Webkit（Chrome, Safari）用のスクロールバーカスタマイズ */
+.table-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 2px solid var(--secondary-color);
 }
 
 /* テーブルのスタイル */
 #resultsTable {
-    width: 100%;           /* テーブルの幅を最大に */
-    border-collapse: collapse; /* セルのボーダーを重ねる */
-    margin-top: 20px;      /* 上の余白 */
-    counter-reset: rowCount; /* 行番号をリセット */
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    counter-reset: rowNumber;
 }
 
-#resultsTable > tbody > tr {
-    counter-increment: rowCount; /* 行番号をインクリメント */
+#resultsTable th {
+    position: sticky;
+    top: 0;
+    background-color: #0e2622;
+    color: white;
+    font-weight: normal;
+    z-index: 1;
+    white-space: nowrap;
+    padding: 12px 64px 12px 12px; /* 右側のパディングを大幅に増やす */
+    position: relative;
 }
 
-#resultsTable > tbody > tr > td:first-child::before {
-    content: counter(rowCount); /* 行番号を表示 */
-    color: #999;            /* 行番号の文字色を薄く */
+/* ソートアイコンの位置調整 */
+#resultsTable th .sort-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px; /* アイコンの左側に余白を追加 */
+}
+
+/* ソートラベルの余白調整 */
+#resultsTable th .sort-label {
+    margin-right: 32px; /* ラベルの右側に余白を追加 */
+    display: inline-block;
 }
 
 #resultsTable th,
 #resultsTable td {
-    padding: 10px;          /* セル内の余白 */
-    border: 1px solid #e0e0e0; /* セルのボーダー色 */
-    text-align: left;       /* テキストを左揃え */
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
 }
 
+/* TaxIDカラムの幅設定 */
+#resultsTable th:first-child,
+#resultsTable td:first-child {
+    width: 40px;
+    padding: 12px 8px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-right: 2px solid var(--border-color);
+}
+
+/* Organism Nameカラムの幅設定 */
+#resultsTable th:nth-child(2),
+#resultsTable td:nth-child(2) {
+    width: auto;
+}
+
+/* Common Nameカラムの幅設定 */
+#resultsTable th:nth-child(3),
+#resultsTable td:nth-child(3) {
+    width: auto;
+}
+
+#resultsTable tr:last-child td {
+    border-bottom: none;
+}
+
+/* テーブルヘッダーのスタイル */
 #resultsTable th {
-    background-color: #e6f7ff; /* 薄いブルー系の背景色 */
-    color: #191970;        /* ヘッダの文字色 (ミッドナイトブルー) */
-    font-weight: bold;     /* ヘッダの文字を太く */
+    background-color: #dae4e3;
+    color: #0e2622;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 2px solid #abb9b8;
+    font-size: 13px;
+}
+
+/* テーブルセルのフォントサイズ */
+#resultsTable td {
+    font-size: 13px;
+    white-space: nowrap;
 }
 
 #resultsTable tr:nth-child(even) {
-    background-color: #f5f5f5; /* 偶数行の背景色を薄く */
+    background-color: #f5f5f5;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#resultsTable tr:hover {
+    background-color: rgba(74, 144, 226, 0.05);
 }
 
-.button-container {
-    margin-left: auto;
-}
-
-.rounded {
-    border-radius: 8px;
-}
-
-.rounded-button {
+/* テーブルソーターのスタイル */
+.tablesorter-header {
+    background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+    background-position: center right;
+    background-repeat: no-repeat;
     cursor: pointer;
-    border: solid 1px gray;
-    border-radius: 8px;
-    opacity: 0.75;
+    white-space: normal;
+    padding: 12px 20px 12px 15px;
 }
 
-.rounded-button:hover {
+.tablesorter-headerAsc {
+    background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+}
+
+.tablesorter-headerDesc {
+    background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+}
+
+.tablesorter-header-inner {
+    white-space: nowrap;
+    padding-right: 16px;  /* ソートアイコンとの間隔を確保 */
+}
+
+#resultsTable td a {
+    color: #268676;
+    text-decoration: none;
+    position: relative;
+    padding-right: 20px; /* アイコン用のスペース */
+text-decoration: underline;
+}
+
+#resultsTable td a:hover {
+    text-decoration: underline;
+}
+
+#resultsTable td a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23268676'%3E%3Cpath d='M5 3c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7H5V5h7V3H5zm12 0v2h3.59l-9.83 9.83 1.41 1.41L21 6.41V10h2V3h-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.9;
+}
+
+#resultsTable td a:hover::after {
     opacity: 1;
+}
+
+#resultsTable td a[target="_blank"]::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23268676'%3E%3Cpath d='M5 3c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-7h-2v7H5V5h7V3H5zm12 0v2h3.59l-9.83 9.83 1.41 1.41L21 6.41V10h2V3h-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.9;
+}
+
+#resultsTable td a[target="_blank"]:hover::after {
+    opacity: 1;
+}
+
+/* ソートアイコンのスタイル */
+#resultsTable th .sort-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+}
+
+/* テーブルの行番号スタイル */
+#resultsTable tbody tr {
+    counter-increment: rowNumber;
+}
+
+#resultsTable tbody tr td:first-child::before {
+    content: counter(rowNumber);
+    display: block;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 8px;
+        --header-height: 44px;
+    }
+
+    .container {
+        gap: 8px;
+    }
+
+    .logo-container {
+        min-width: auto;
+    }
+
+    .logo {
+        height: 24px;
+    }
+
+    .rounded {
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .rounded-button {
+        padding: 6px 12px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .button-container {
+        min-width: auto;
+    }
+    
+    #graph-area {
+        height: 400px;
+    }
+    
+    #resultsTable {
+        font-size: 13px;
+    }
+    
+    #resultsTable th,
+    #resultsTable td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 4px;
+    }
+
+    .logo {
+        height: 20px;
+    }
+}
+
+/* ナビゲーションコントロール */
+div.vis-network div.vis-navigation {
+    position: absolute;
+    right: 130px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    gap: 8px;
+    z-index: 10;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* 背景画像を削除 */
+div.vis-network div.vis-navigation div.vis-button {
+    background-image: none !important;
+}
+
+div.vis-network div.vis-navigation div.vis-button.vis-up,
+div.vis-network div.vis-navigation div.vis-button.vis-down,
+div.vis-network div.vis-navigation div.vis-button.vis-left,
+div.vis-network div.vis-navigation div.vis-button.vis-right {
+    background-image: none !important;
+}
+
+/* ローディングアニメーション */
+.loader {
+    width: 40px;
+    aspect-ratio: 1.154;
+    --_g: no-repeat radial-gradient(farthest-side,#268676 90%,#0000);
+    background: 
+        var(--_g) 50%  0,
+        var(--_g) 0    100%,
+        var(--_g) 100% 100%;
+    background-size: 35% calc(35%*1.154);
+    animation: l16 1s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes l16 { 
+    50%,100% {background-position: 100% 100%,50% 0,0 100%} 
 }
