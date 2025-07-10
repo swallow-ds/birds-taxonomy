@@ -1,5 +1,4 @@
 1002788 "taxon name":"Indicator indicator" name:ノドグロミツオシエ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Greater%20Honeyguide%20%28Indicator%20indicator%29%20%2845663851145%29%2C%20crop.jpg
-100784 "taxon name":"Balearica regulorum gibbericeps" name:"Balearica regulorum gibbericeps"
 109042 "taxon name":"Tympanuchus pallidicinctus" name:ヒメソウゲンライチョウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Lesser%20Prairie%20Chicken%2C%20New%20Mexico.jpg
 114313 "taxon name":Pipridae name:マイコドリ科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Helmeted%20Manakin%20%28Antilophia%20galeata%29%20male%20from%20rear.jpg
 114328 "taxon name":Neopelma name:Neopelma
@@ -651,7 +650,6 @@
 48881 -> 48883 :"child taxon"
 142475 -> 48891 :"child taxon"
 400783 -> 87174 :"child taxon"
-925459 -> 100784 :"child taxon"
 30413 -> 925459 :"child taxon"
 9003 -> 109042 :"child taxon"
 114313 -> 114328 :"child taxon"
