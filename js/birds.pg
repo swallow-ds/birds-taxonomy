@@ -56,14 +56,12 @@
 198806 "taxon name":"Calidris pugnax" name:エリマキシギ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Philomachus%20pugnaxRuffKampfl%C3%A4ufer.JPG
 202279 "taxon name":Harpia name:Harpia
 202280 "taxon name":"Harpia harpyja" name:オウギワシ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Harpia-harpyja-001.jpg
-202946 "taxon name":"Apteryx mantelli mantelli" name:"Apteryx mantelli mantelli"
 2068716 "taxon name":Anatinae name:カモ亜科 rank_ja:亜科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Anas%20platyrhynchos%20male%20female%20quadrat.jpg
 2068721 "taxon name":Aythyinae name:Aythyinae
 2068722 "taxon name":Anserinae name:ガン亜科 rank_ja:亜科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Geese%20Fruggo01.JPG
 2116661 "taxon name":Sylvioidea name:ウグイス上科 rank_ja:上科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Sylvia%20atricapilla%20male%202.jpg
 219594 "taxon name":"Aythya fuligula" name:キンクロハジロ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Tufted%20Duck%20Aythya%20fuligula%20Male%20by%20Dr.%20Raju%20Kasambe%20DSCN9795%20%2817%29.jpg
 221976 "taxon name":"Pyrgilauda ruficollis" name:チャミミユキスズメ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/PyrgilaudaRufogularis.png
-223781 "taxon name":"Aquila chrysaetos chrysaetos" name:"Aquila chrysaetos chrysaetos"
 240206 "taxon name":"Pterocles gutturalis" name:キノドサケイ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Pterocles%20gutturalis.jpg
 245059 "taxon name":Oenanthe name:セリ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe%20aquatica%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-228.jpg
 2489341 "taxon name":"Strigops habroptila" name:フクロウオウム rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Buller%20Kakapo.jpg
@@ -338,7 +336,6 @@
 9243 "taxon name":Calypte name:Calypte
 9244 "taxon name":"Calypte anna" name:アンナハチドリ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Anna%27s%20Hummingbird%20-%200L8A9194.jpg
 925459 "taxon name":"Balearica regulorum" name:ホオジロカンムリヅル rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Balearica%20regulorum%20regulorum%2C%20South%20Africa.jpg
-932674 "taxon name":"Corvus cornix cornix" name:"Corvus cornix cornix"
 93934 "taxon name":"Coturnix japonica" name:ウズラ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Coturnix%20japonica%2C%20Yehliu%2C%20Taiwan%201.jpg
 94827 "taxon name":"Tinamus guttatus" name:ノドジロシギダチョウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Tinamus%20guttatus.JPG
 95654 "taxon name":Melozone name:Melozone
@@ -400,7 +397,6 @@
 28728 -> 478634 :"child taxon"
 478634 -> 478635 :"child taxon"
 88178 -> 649802 :"child taxon"
-181096 -> 932674 :"child taxon"
 9126 -> 114313 :"child taxon"
 37613 -> 81927 :"child taxon"
 164646 -> 84832 :"child taxon"
@@ -444,11 +440,9 @@
 189527 -> 189528 :"child taxon"
 8955 -> 202279 :"child taxon"
 202279 -> 202280 :"child taxon"
-2696672 -> 202946 :"child taxon"
 8821 -> 2696672 :"child taxon"
 30384 -> 219594 :"child taxon"
 667179 -> 221976 :"child taxon"
-8962 -> 223781 :"child taxon"
 9158 -> 667179 :"child taxon"
 56296 -> 240206 :"child taxon"
 9224 -> 309877 :"child taxon"
