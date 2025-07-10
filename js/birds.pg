@@ -1,7 +1,6 @@
 1002788 "taxon name":"Indicator indicator" name:ノドグロミツオシエ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Greater%20Honeyguide%20%28Indicator%20indicator%29%20%2845663851145%29%2C%20crop.jpg
 100784 "taxon name":"Balearica regulorum gibbericeps" name:"Balearica regulorum gibbericeps"
 109042 "taxon name":"Tympanuchus pallidicinctus" name:ヒメソウゲンライチョウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Lesser%20Prairie%20Chicken%2C%20New%20Mexico.jpg
-1094192 "taxon name":"Motacilla alba alba" name:"Motacilla alba alba"
 114313 "taxon name":Pipridae name:マイコドリ科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Helmeted%20Manakin%20%28Antilophia%20galeata%29%20male%20from%20rear.jpg
 114328 "taxon name":Neopelma name:Neopelma
 114329 "taxon name":"Neopelma chrysocephalum" name:キボウシマイコドリ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/HeteropelmaIgnicepsSmit.jpg
@@ -671,7 +670,6 @@
 9158 -> 2823048 :"child taxon"
 2823048 -> 356909 :"child taxon"
 35539 -> 889875 :"child taxon"
-45807 -> 1094192 :"child taxon"
 30420 -> 1196302 :"child taxon"
 2517974 -> 2857394 :"child taxon"
 2517974 -> 2857398 :"child taxon"
