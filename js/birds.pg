@@ -68,7 +68,6 @@
 2696672 "taxon name":"Apteryx mantelli" name:ノースアイランドブラウンキーウィ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Apteryx%20mantelli%20-Rotorua%2C%20North%20Island%2C%20New%20Zealand-8a.jpg
 279965 "taxon name":"Antrostomus carolinensis" name:チャックウィルヨタカ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus%20carolinensisDF28N01B.jpg
 2823048 "taxon name":Onychostruthus name:Onychostruthus
-2857394 "taxon name":"Ammospiza nelsoni" name:"Ammospiza nelsoni"
 2857398 "taxon name":"Ammospiza caudacuta" name:トゲオヒメドリ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Saltmarsh%20sharp%20tailed%20sparrow.jpg
 28725 "taxon name":Corvidae name:カラス科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Blue%20jay%20in%20PP%20%2830960%29.jpg
 28728 "taxon name":Tyrannidae name:タイランチョウ科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Empidonax%20flavescens-cropped%20version.jpg
@@ -662,7 +661,6 @@
 2823048 -> 356909 :"child taxon"
 35539 -> 889875 :"child taxon"
 30420 -> 1196302 :"child taxon"
-2517974 -> 2857394 :"child taxon"
 2517974 -> 2857398 :"child taxon"
 35547 -> 2489341 :"child taxon"
 8825 -> 3073854 :"child taxon"
