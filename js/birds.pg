@@ -60,7 +60,6 @@
 219594 "taxon name":"Aythya fuligula" name:キンクロハジロ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Tufted%20Duck%20Aythya%20fuligula%20Male%20by%20Dr.%20Raju%20Kasambe%20DSCN9795%20%2817%29.jpg
 221976 "taxon name":"Pyrgilauda ruficollis" name:チャミミユキスズメ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/PyrgilaudaRufogularis.png
 240206 "taxon name":"Pterocles gutturalis" name:キノドサケイ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Pterocles%20gutturalis.jpg
-245059 "taxon name":Oenanthe name:セリ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe%20aquatica%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-228.jpg
 2489341 "taxon name":"Strigops habroptila" name:フクロウオウム rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Buller%20Kakapo.jpg
 2517974 "taxon name":Ammospiza name:Ammospiza
 2558200 "taxon name":Accipitriformes name:タカ目 rank_ja:目 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/%D7%93%D7%95%D7%A8%D7%A1%D7%99-%D7%99%D7%95%D7%9D-01.jpg
@@ -74,7 +73,6 @@
 28725 "taxon name":Corvidae name:カラス科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Blue%20jay%20in%20PP%20%2830960%29.jpg
 28728 "taxon name":Tyrannidae name:タイランチョウ科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Empidonax%20flavescens-cropped%20version.jpg
 28729 "taxon name":Empidonax name:Empidonax
-2939378 "taxon name":"Oenanthe melanoleuca" name:"Oenanthe melanoleuca"
 296741 "taxon name":"Chiroxiphia lanceolata" name:ハリオセアオマイコドリ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Lance-tailed%20Manakin%20%2814700946111%29.jpg
 299123 "taxon name":"Lonchura striata domestica" name:ジュウシマツ rank_ja:亜種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Society%20Finch%20light%20brown.jpg
 30384 "taxon name":Aythya name:ハジロ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Canvasback%20pair2.jpg
@@ -657,7 +655,6 @@
 33574 -> 128389 :"child taxon"
 128389 -> 128390 :"child taxon"
 28729 -> 164674 :"child taxon"
-36291 -> 245059 :"child taxon"
 8821 -> 308060 :"child taxon"
 114313 -> 321397 :"child taxon"
 321397 -> 321398 :"child taxon"
@@ -668,7 +665,6 @@
 2517974 -> 2857394 :"child taxon"
 2517974 -> 2857398 :"child taxon"
 35547 -> 2489341 :"child taxon"
-245059 -> 2939378 :"child taxon"
 8825 -> 3073854 :"child taxon"
 8825 -> 3073796 :"child taxon"
 3073796 -> 3073797 :"child taxon"
