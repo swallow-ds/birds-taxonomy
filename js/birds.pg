@@ -30,7 +30,6 @@
 175121 "taxon name":Passeroidea name:スズメ上科 rank_ja:上科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Tree%20Sparrow%20at%20Osaka%20Japan.jpg
 175829 "taxon name":Buceros name:サイチョウ属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Buceros%20bicornis%20%28female%29%20-in%20tree-8.jpg
 175835 "taxon name":"Buceros rhinoceros" name:サイチョウ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Hornbill%202.jpg
-175836 "taxon name":"Buceros rhinoceros silvestris" name:"Buceros rhinoceros silvestris"
 176042 "taxon name":Nestor name:ミヤマオウム属 rank_ja:属 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Nestor%20meridionalis.jpg
 176057 "taxon name":"Nestor notabilis" name:ミヤマオウム rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Kea.jpg
 181096 "taxon name":"Corvus cornix" name:ズキンガラス rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Corvus%20cornix%20%2833515567265%29.jpg
@@ -144,7 +143,6 @@
 43148 "taxon name":Hirundinidae name:ツバメ科 rank_ja:科 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/House%20Martin%2C%20Delichon%20urbicum...mud%20collecting%20-%20Flickr%20-%20gailhampshire.jpg
 43149 "taxon name":Hirundo name:Hirundo
 43150 "taxon name":"Hirundo rustica" name:ツバメ rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Barn%20Swallow%20%2895504589%29.jpeg
-441894 "taxon name":"Struthio camelus australis" name:"Struthio camelus australis"
 44387 "taxon name":Zonotrichia name:Zonotrichia
 44394 "taxon name":"Zonotrichia albicollis" name:ノドジロシトド rank_ja:種 thumbnail:http://commons.wikimedia.org/wiki/Special:FilePath/Zonotrichia%20albicollis%20CT1.jpg
 44395 "taxon name":Melospiza name:Melospiza
@@ -391,7 +389,6 @@
 196036 -> 415023 :"child taxon"
 114313 -> 415027 :"child taxon"
 415027 -> 415028 :"child taxon"
-8801 -> 441894 :"child taxon"
 28728 -> 478634 :"child taxon"
 478634 -> 478635 :"child taxon"
 88178 -> 649802 :"child taxon"
@@ -405,7 +402,6 @@
 55806 -> 175006 :"child taxon"
 57380 -> 175829 :"child taxon"
 175829 -> 175835 :"child taxon"
-175835 -> 175836 :"child taxon"
 9224 -> 176042 :"child taxon"
 176042 -> 176057 :"child taxon"
 30420 -> 181096 :"child taxon"
